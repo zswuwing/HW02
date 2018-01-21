@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<a href="http://hw02.kehu.pw">Back to HW02</a><br>
+<h1 id="number" value="10">10</h1>
+<script>
+function alertWin() {
+	var num = document.getElementById("number").innerHTML;
+	alert(num);
+}
+function increment() {
+	var num = parseInt(document.getElementById("number").innerHTML);
+	var num = num + 1;
+	document.getElementById("number").innerHTML = num;
+}
+
+function place_bottom(){
+	var para = document.createElement("p");
+	var num = document.getElementById("number").innerHTML;
+	var node = document.createTextNode(num);
+	para.appendChild(node);
+	
+
+	var element = document.getElementById("div2");
+	var Child = document.getElementById("p1");
+	element.insertBefore(para,Child);
+	//alert("document.body.innerHTML");	
+}
+</script>
+<div id="div1">
+<button type="button" onclick="alertWin()")">First Button</button>
+<button type="button" onclick="increment()")">Increment</button>
+<button type="button" onclick="place_bottom()" id="olace">Last Button</button>
+</div>
+
+<div id="div2">
+<p id="p1"></p>
+</div>
+</body>
+</html>
